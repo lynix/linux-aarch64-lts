@@ -19,11 +19,15 @@ source=(
   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.xz
   0001-net-smsc95xx-Allow-mac-address-to-be-set-as-a-parame.patch
   0002-arm64-dts-rockchip-disable-pwm0-on-rk3399-firefly.patch
+  cadmium-gru.0001-drm-bridge-analogix_dp-Don-t-return-EBUSY-when-msg-s.patch
+  cadmium-gru.0002-drm-rockchip-Only-wait-for-panel-ACK-on-PSR-entry.patch
   config
 )
 sha256sums=('b9fd616facd6becfceef88b9be718d0f16625cab3fe81d11384802a7091e85ec'
             '013ab7f5bcf2cd486e819fb13fde1f673ac72978984a8befea13938eaf8ddd8e'
             'bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4'
+            'a83304fdf07d3497147f07131595f3aea09e1f8d2c54cd48bed174f68a1221dc'
+            '915aefb009189993de12ebdf6a01f0e533fbcee4c6fd0f78115fcbdc110bc7e9'
             '9374d84c8d45d29c37ca4ebe295deb5302f413a53b3d5dc6b7778fce913e9bc7')
 
 prepare() {
