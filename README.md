@@ -2,8 +2,6 @@
 
 **aarch64 LTS Kernel package for [Arch Linux ARM](https://archlinuxarm.org)**
 
-AUR: [linux-aarch64-lts](https://aur.archlinux.org/packages/linux-aarch64-lts)
-
 ---
 
 Builds of this package are done via [QEMU binfmt](https://nerdstuff.org/posts/2020/2020-003_simplest_way_to_create_an_arm_chroot) on x86_64.
