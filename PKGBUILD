@@ -5,7 +5,7 @@ buildarch=8
 
 pkgbase=linux-aarch64-lts
 pkgver=6.1.62
-pkgrel=1
+pkgrel=2
 pkgdesc='AArch64 multi-platform LTS Linux'
 url='https://github.com/lynix/linux-aarch64-lts'
 arch=(aarch64)
