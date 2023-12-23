@@ -1,6 +1,6 @@
 pkgbase = linux-aarch64-lts
 	pkgdesc = AArch64 multi-platform LTS Linux
-	pkgver = 6.1.68
+	pkgver = 6.1.69
 	pkgrel = 1
 	url = https://github.com/lynix/linux-aarch64-lts
 	arch = aarch64
@@ -14,18 +14,18 @@ pkgbase = linux-aarch64-lts
 	makedepends = uboot-tools
 	makedepends = dtc
 	options = !strip
-	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.68.tar.xz
+	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.69.tar.xz
 	source = 0001-net-smsc95xx-Allow-mac-address-to-be-set-as-a-parame.patch
 	source = 0002-arm64-dts-rockchip-disable-pwm0-on-rk3399-firefly.patch
 	source = cadmium-gru.0001-drm-bridge-analogix_dp-Don-t-return-EBUSY-when-msg-s.patch
 	source = cadmium-gru.0002-drm-rockchip-Only-wait-for-panel-ACK-on-PSR-entry.patch
 	source = config
-	sha256sums = 365ff26a30e206de9b18489f45d38582a0a61b7c5919f8ab89295a47316784e1
+	sha256sums = 7e3d2694d18ce502068cc88a430da809abbd17d0773268524ebece442612b541
 	sha256sums = 013ab7f5bcf2cd486e819fb13fde1f673ac72978984a8befea13938eaf8ddd8e
 	sha256sums = bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4
 	sha256sums = a83304fdf07d3497147f07131595f3aea09e1f8d2c54cd48bed174f68a1221dc
 	sha256sums = 915aefb009189993de12ebdf6a01f0e533fbcee4c6fd0f78115fcbdc110bc7e9
-	sha256sums = e009f54d540d5aaad325a01b508a29878a01ae88315232a9b4c9d274bf8bdbef
+	sha256sums = a854e228de1baa2d1733a3eefc2e0ea83a17cc89cdcb756875219e75b62c41a3
 
 pkgname = linux-aarch64-lts
 	pkgdesc = The AArch64 multi-platform LTS Linux kernel and modules
@@ -35,11 +35,11 @@ pkgname = linux-aarch64-lts
 	depends = kmod
 	depends = initramfs
 	optdepends = wireless-regdb: to set the correct wireless channels of your country
-	provides = linux=6.1.68
+	provides = linux=6.1.69
 	provides = WIREGUARD-MODULE
 	conflicts = linux
 
 pkgname = linux-aarch64-lts-headers
 	pkgdesc = Headers and scripts for building modules for the AArch64 multi-platform LTS Linux kernel
-	provides = linux-headers=6.1.68
+	provides = linux-headers=6.1.69
 	conflicts = linux-headers

@@ -4,7 +4,7 @@
 buildarch=8
 
 pkgbase=linux-aarch64-lts
-pkgver=6.1.68
+pkgver=6.1.69
 pkgrel=1
 pkgdesc='AArch64 multi-platform LTS Linux'
 url='https://github.com/lynix/linux-aarch64-lts'
@@ -23,12 +23,12 @@ source=(
   cadmium-gru.0002-drm-rockchip-Only-wait-for-panel-ACK-on-PSR-entry.patch
   config
 )
-sha256sums=('365ff26a30e206de9b18489f45d38582a0a61b7c5919f8ab89295a47316784e1'
+sha256sums=('7e3d2694d18ce502068cc88a430da809abbd17d0773268524ebece442612b541'
             '013ab7f5bcf2cd486e819fb13fde1f673ac72978984a8befea13938eaf8ddd8e'
             'bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4'
             'a83304fdf07d3497147f07131595f3aea09e1f8d2c54cd48bed174f68a1221dc'
             '915aefb009189993de12ebdf6a01f0e533fbcee4c6fd0f78115fcbdc110bc7e9'
-            'e009f54d540d5aaad325a01b508a29878a01ae88315232a9b4c9d274bf8bdbef')
+            '0ca113cce67edc473644c3d765d24c66c1d62e510d05a647d7303709524755c6')
 
 prepare() {
   cd $_srcname
