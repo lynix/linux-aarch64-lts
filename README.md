@@ -4,7 +4,18 @@
 
 ---
 
-Builds of this package are done via [QEMU binfmt](https://nerdstuff.org/posts/2020/2020-003_simplest_way_to_create_an_arm_chroot) on x86_64.
+## Motivation
+
+This repository aims at providing a kernel package for aarch64 that
+follows the latest LTS branch while staying as close to upstream Arch
+packaging as possible.
+
+It is maintained as a separate project as pull requests on
+[archlinuxarm/PKGBUILDs](https://github.com/archlinuxarm/PKGBUILDs) have
+all been ignored.
+
+
+## Usage
 
 In order to include this as a repository add the following block in
 `pacman.conf`:
@@ -13,6 +24,25 @@ In order to include this as a repository add the following block in
     SigLevel = Optional
     Server = https://github.com/lynix/linux-aarch64-lts/releases/latest/download
 
+:warning: **Please note:** I can only test this package on an *Odroid C4*
+and a Hetzner cloud VM as those are the only aarch64 machines I have at hand.
 
-:warning: **Please note:** In contrast to *linux-aarch64* this package
-(currently) does not support Chromebooks!
+Use at your own risk on other platforms!
+
+
+## Migrating from *linux-aarch64*
+
+Please consider the following differences when migrating from the official
+*linux-aarch64* package:
+
+ * [limited](https://github.com/lynix/linux-aarch64-lts/pull/3) support for Chromebooks
+ * file names for kernel and initrd follow upstream Arch packaging, e.g. `/boot/vmlinuz-linux-aarch64-lts` instead of `/boot/Image`
+
+
+## Contributions
+
+Pull requests are generally welcome and appreciated.
+
+However I try to keep the number of patches against kernel sources low, so
+please understand that I won't accept everything (e.g. patches for niche SBCs
+that are not supported by mainline).
