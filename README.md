@@ -36,6 +36,7 @@ Please consider the following differences when migrating from the official
 *linux-aarch64* package:
 
  * file names for kernel and initrd follow upstream Arch packaging, e.g. `/boot/vmlinuz-linux-aarch64-lts` instead of `/boot/Image`
+ * no support for ChromeBooks
 
 
 ## Contributions
