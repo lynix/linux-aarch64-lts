@@ -35,7 +35,6 @@ Use at your own risk on other platforms!
 Please consider the following differences when migrating from the official
 *linux-aarch64* package:
 
- * [limited](https://github.com/lynix/linux-aarch64-lts/pull/3) support for Chromebooks
  * file names for kernel and initrd follow upstream Arch packaging, e.g. `/boot/vmlinuz-linux-aarch64-lts` instead of `/boot/Image`
 
 
