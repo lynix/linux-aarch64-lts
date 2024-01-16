@@ -4,7 +4,7 @@
 buildarch=8
 
 pkgbase=linux-aarch64-lts
-pkgver=6.1.72
+pkgver=6.1.73
 pkgrel=1
 pkgdesc='AArch64 multi-platform LTS Linux'
 url='https://github.com/lynix/linux-aarch64-lts'
@@ -21,10 +21,10 @@ source=(
   0002-arm64-dts-rockchip-disable-pwm0-on-rk3399-firefly.patch
   config
 )
-sha256sums=('98dce69077c35cffca799dcdbbd32a02242aad6b0950eb931936bb2ef69f0926'
+sha256sums=('6cad48706bf1cde342613dca2a2cd6dd4f79f88f9e4d356263564e4b2a5d7e87'
             '013ab7f5bcf2cd486e819fb13fde1f673ac72978984a8befea13938eaf8ddd8e'
             'bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4'
-            'b5fda9dccf64f377b49debb2c0f6297f8004c5d1608ed2daf72bf575f858b390')
+            'ba51b5db64ee1ee9a643d7deb4a98fa63e080d2001947067d8d243f23fd1e068')
 
 prepare() {
   cd $_srcname
