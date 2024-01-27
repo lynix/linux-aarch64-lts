@@ -26,13 +26,16 @@ sha256sums=('6cd19410330c13ec4c18fd28a83d3e40fc12a152815fb7c3e1b0764329093a56'
             'bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4'
             '54f80c520d7e8eaef15b6875378621a92cf39cbc5d53883fff358ec9ba462cb9')
 
+export KBUILD_BUILD_HOST=archlinux
+export KBUILD_BUILD_USER=$pkgbase
+export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+
 prepare() {
   cd $_srcname
 
   echo "Setting version..."
-  scripts/setlocalversion --save-scmversion
   echo "-$pkgrel" > localversion.10-pkgrel
-  echo "${pkgbase#linux}" > localversion.20-pkgname
+  echo "${pkgbase#linux-aarch64}" > localversion.20-pkgname
 
   local src
   for src in "${source[@]}"; do
@@ -90,8 +93,8 @@ _package() {
   make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 DEPMOD=/doesnt/exist \
     modules_install
 
-  # remove build and source links
-  rm "$modulesdir"/{source,build}
+  # remove build link
+  rm "$modulesdir/build"
 }
 
 _package-headers() {
