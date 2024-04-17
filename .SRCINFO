@@ -1,6 +1,6 @@
 pkgbase = linux-aarch64-lts
 	pkgdesc = AArch64 multi-platform LTS Linux
-	pkgver = 6.6.27
+	pkgver = 6.6.28
 	pkgrel = 1
 	url = https://github.com/lynix/linux-aarch64-lts
 	arch = aarch64
@@ -14,14 +14,14 @@ pkgbase = linux-aarch64-lts
 	makedepends = uboot-tools
 	makedepends = dtc
 	options = !strip
-	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.27.tar.xz
+	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.28.tar.xz
 	source = 0001-net-smsc95xx-Allow-mac-address-to-be-set-as-a-parame.patch
 	source = 0002-arm64-dts-rockchip-disable-pwm0-on-rk3399-firefly.patch
 	source = config
-	sha256sums = 639e50060e3c8f23ed017cb10cfeacc6ba88ff5583812bb76859b4cc6a128291
+	sha256sums = 818716ed13e7dba6aaeae24e3073993e260812ed128d10272e94b922ee6d3394
 	sha256sums = 004f5330702dea26ba35ec1f573a5af4c18ce0ea3d2c35818ee3d1034ee5fce5
 	sha256sums = bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4
-	sha256sums = f82573d0c5a75b1e5b62244a51b070755f6df6c4802826a33dbd6a847b771c0e
+	sha256sums = 106d862f3ad0a72976aac45bc97249bd1b253fb7d927cb52d8736a0ba7d3a8d9
 
 pkgname = linux-aarch64-lts
 	pkgdesc = The AArch64 multi-platform LTS Linux kernel and modules
@@ -31,11 +31,11 @@ pkgname = linux-aarch64-lts
 	depends = kmod
 	depends = initramfs
 	optdepends = wireless-regdb: to set the correct wireless channels of your country
-	provides = linux=6.6.27
+	provides = linux=6.6.28
 	provides = WIREGUARD-MODULE
 	conflicts = linux
 
 pkgname = linux-aarch64-lts-headers
 	pkgdesc = Headers and scripts for building modules for the AArch64 multi-platform LTS Linux kernel
-	provides = linux-headers=6.6.27
+	provides = linux-headers=6.6.28
 	conflicts = linux-headers
