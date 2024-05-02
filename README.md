@@ -17,6 +17,32 @@ all been ignored.
 
 ## Usage
 
+In order to make use of the kernel package provided by this repository there are
+three options:
+
+### Build Natively
+
+Simply run `makepkg` from within this directory on the target device to build
+natively.
+
+### Emulated Cross-Platform Build using Docker
+
+In _builder_ there is a `Dockerfile` and a wrapper script that enable QEMU binfmt
+emulation based cross-platform builds using Docker.
+
+The build container itself can be built using
+
+    $ docker build --pull -t alarm-builder:latest --platform linux/arm64 builder
+
+after which the package build process can be started using the wrapper script:
+
+    $ ./builder/aarch64-makepkg.sh -C -c
+
+This is exactly the way that the pre-built packages are provided as artifacts for
+this repository (see following section).
+
+### Using Pre-Built Packages via Pacman Repository
+
 In order to include this as a repository add the following block in
 `pacman.conf`:
 
