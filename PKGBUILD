@@ -5,7 +5,7 @@ buildarch=8
 
 pkgbase=linux-aarch64-lts
 pkgver=6.6.58
-pkgrel=2
+pkgrel=3
 pkgdesc='AArch64 multi-platform LTS Linux'
 url='https://github.com/lynix/linux-aarch64-lts'
 arch=(aarch64)
@@ -24,7 +24,7 @@ source=(
 sha256sums=('e7df81e588d70fab5ec3ec3bb04ac53d51f0860fc3b1ec45e0a4167a026899db'
             '004f5330702dea26ba35ec1f573a5af4c18ce0ea3d2c35818ee3d1034ee5fce5'
             'bcb8a42654df5f9670367950daaa01b165c15618f827d18b7b2a8d53d39227a4'
-            '3bc78389021fcc4dc79b499a2fb93398d65829e46872e72d94af4667632d8629')
+            '375e2d7e192e05d971a73f33e4027fcf1ad7cbade158a3d81a490e4e520251f7')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
