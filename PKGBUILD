@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc='AArch64 multi-platform LTS Linux'
 url='https://github.com/lynix/linux-aarch64-lts'
 arch=(aarch64)
-license=(GPL2)
+license=(GPL-2.0-only)
 makedepends=(
   xmlto docbook-xsl kmod inetutils bc git uboot-tools dtc
 )
