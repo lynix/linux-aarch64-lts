@@ -18,14 +18,16 @@ all been ignored.
 ## Usage
 
 In order to make use of the kernel package provided by this repository there are
-three options:
+four options:
 
 ### Build Natively
 
 Simply run `makepkg` from within this directory on the target device to build
-natively.
+natively:
 
-### Emulated Cross-Platform Build using Docker
+    $ makepkg -s -r
+
+### Emulated Native Build using Docker and QEMU
 
 In _builder_ there is a `Dockerfile` and a wrapper script that enable QEMU binfmt
 emulation based cross-platform builds using Docker.
@@ -40,6 +42,17 @@ after which the package build process can be started using the wrapper script:
 
 This is exactly the way that the pre-built packages are provided as artifacts for
 this repository (see following section).
+
+### Cross Compilation
+
+On an x86_64 Arch Linux host one can install `aarch64-linux-gnu-gcc` and use the
+following to cross-compile the package without modification:
+
+    $ CARCH=aarch64 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- makepkg -s -r
+
+This may be considered somewhat unclean (even when done in a clean chroot) but
+has the advantage of reducing build time drastically compared to emulated
+native builds (due to the lack of binfmt emulation).
 
 ### Using Pre-Built Packages via Pacman Repository
 
