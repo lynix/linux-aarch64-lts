@@ -40,9 +40,6 @@ after which the package build process can be started using the wrapper script:
 
     $ ./builder/aarch64-makepkg.sh -C -c
 
-This is exactly the way that the pre-built packages are provided as artifacts for
-this repository (see following section).
-
 ### Cross Compilation
 
 On an x86_64 Arch Linux host one can install `aarch64-linux-gnu-gcc` and use the
