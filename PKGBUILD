@@ -13,7 +13,7 @@ license=(GPL-2.0-only)
 makedepends=(
   xmlto docbook-xsl kmod inetutils bc git uboot-tools dtc
 )
-options=('!strip')
+options=('!strip' '!debug')
 _srcname=linux-$pkgver
 source=(
   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.xz
