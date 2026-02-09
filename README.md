@@ -34,7 +34,7 @@ emulation based cross-platform builds using Docker.
 
 The build container itself can be built using
 
-    $ docker build --pull -t alarm-builder:latest --platform linux/arm64 builder
+    $ docker build --pull -t aarch64-lts-builder:latest --platform linux/arm64 builder
 
 after which the package build process can be started using the wrapper script:
 

@@ -7,7 +7,7 @@
 set -e
 
 readonly DOCKER_ARCH='linux/arm64'
-readonly DOCKER_IMG='alarm-builder:latest'
+readonly DOCKER_IMG="${IMAGE:-aarch64-lts-builder:latest}"
 readonly DOCKER_ULIMIT='nofile=1024:524288'
 readonly WORK_DIR='/work'
 
