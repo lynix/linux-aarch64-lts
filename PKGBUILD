@@ -11,7 +11,7 @@ url='https://github.com/lynix/linux-aarch64-lts'
 arch=(aarch64)
 license=(GPL-2.0-only)
 makedepends=(
-  xmlto docbook-xsl kmod inetutils bc git uboot-tools dtc
+  xmlto docbook-xsl kmod inetutils bc git uboot-tools dtc python
 )
 options=('!strip' '!debug')
 _srcname=linux-$pkgver
