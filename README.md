@@ -27,14 +27,14 @@ natively:
 
     $ makepkg -s -r
 
-### Emulated Native Build using Docker and QEMU
+### Emulated Native Build using Podman and QEMU
 
-In _builder_ there is a `Dockerfile` and a wrapper script that enable QEMU binfmt
-emulation based cross-platform builds using Docker.
+In _builder_ there is a `Containerfile` and a wrapper script that enable QEMU binfmt
+emulation based cross-platform builds using Podman (or Docker).
 
 The build container itself can be built using
 
-    $ docker build --pull -t aarch64-lts-builder:latest --platform linux/arm64 builder
+    $ podman build --pull -t aarch64-lts-builder:latest --platform linux/arm64 builder
 
 after which the package build process can be started using the wrapper script:
 

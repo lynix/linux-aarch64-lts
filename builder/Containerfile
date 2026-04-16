@@ -1,9 +1,14 @@
-FROM scratch AS stage1
-
+FROM docker.io/library/busybox AS stage0
 ARG ROOTFS_URL=http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
-ARG MIRROR=http://mirror.archlinuxarm.org/\$arch/\$repo
-ADD --unpack ${ROOTFS_URL} /
 
+ADD "${ROOTFS_URL}" /
+RUN mkdir /mnt && \
+	tar -C /mnt -xzf /ArchLinuxARM-aarch64-latest.tar.gz
+
+FROM scratch AS stage1
+ARG MIRROR=http://mirror.archlinuxarm.org/\$arch/\$repo
+
+COPY --from=stage0 /mnt /
 RUN pacman-key --init && \
 	pacman-key --populate archlinuxarm && \
 	sed -i /etc/pacman.conf -r \
@@ -34,3 +39,5 @@ RUN pacman -S --disable-download-timeout --noconfirm \
 		python \
 		inetutils && \
 	rm -rf /var/cache/pacman/pkg/*
+
+USER alarm
